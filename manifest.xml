@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+           xsi:type="TaskPaneApp">
+
+  <Id>a1b2c3d4-e5f6-7890-abcd-ef1234567890</Id>
+  <Version>1.0.0</Version>
+  <ProviderName>AI Assistant</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="AI Mail Assistant"/>
+  <Description DefaultValue="AI-powered email translation, summary, reply, and polish"/>
+  <SupportUrl DefaultValue="https://github.com/yourname/outlook-ai-assistant"/>
+
+  <!-- Icons -->
+  <IconUrl DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/assets/icon-64.png"/>
+
+  <!-- App Domains -->
+  <AppDomains>
+    <AppDomain>http://localhost:3001</AppDomain>
+    <AppDomain>http://127.0.0.1:3001</AppDomain>
+  </AppDomains>
+
+  <!-- Hosts - Required at base level -->
+  <Hosts>
+    <Host Name="Mailbox"/>
+  </Hosts>
+
+  <!-- Permissions -->
+  <Requirements>
+    <Sets DefaultMinVersion="1.1">
+      <Set Name="Mailbox"/>
+    </Sets>
+  </Requirements>
+
+  <!-- Default Settings -->
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/index.html"/>
+  </DefaultSettings>
+
+  <Permissions>ReadWriteMailbox</Permissions>
+
+  <!-- VersionOverrides for Ribbon -->
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="MailHost">
+        <DesktopFormFactor>
+          <ExtensionPoint xsi:type="MessageReadCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="AIAssistantGroup">
+                <Label resid="GroupLabel"/>
+                <Control xsi:type="Button" id="SettingsButton">
+                  <Label resid="SettingsLabel"/>
+                  <Supertip>
+                    <Title resid="SettingsTitle"/>
+                    <Description resid="SettingsDescription"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image resid="SettingsIcon"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>SettingsTaskpane</TaskpaneId>
+                    <SourceLocation resid="SettingsTaskpaneUrl"/>
+                  </Action>
+                </Control>
+                <Control xsi:type="Button" id="TranslateButton">
+                  <Label resid="TranslateLabel"/>
+                  <Supertip>
+                    <Title resid="TranslateTitle"/>
+                    <Description resid="TranslateDescription"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image resid="TranslateIcon"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>translateEmail</FunctionName>
+                  </Action>
+                </Control>
+                <Control xsi:type="Button" id="SummaryButton">
+                  <Label resid="SummaryLabel"/>
+                  <Supertip>
+                    <Title resid="SummaryTitle"/>
+                    <Description resid="SummaryDescription"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image resid="SummaryIcon"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>SummaryTaskpane</TaskpaneId>
+                    <SourceLocation resid="SummaryTaskpaneUrl"/>
+                  </Action>
+                </Control>
+                <Control xsi:type="Button" id="ReplyButton">
+                  <Label resid="ReplyLabel"/>
+                  <Supertip>
+                    <Title resid="ReplyTitle"/>
+                    <Description resid="ReplyDescription"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image resid="ReplyIcon"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ReplyTaskpane</TaskpaneId>
+                    <SourceLocation resid="ReplyTaskpaneUrl"/>
+                  </Action>
+                </Control>
+                <Control xsi:type="Button" id="PolishButton">
+                  <Label resid="PolishLabel"/>
+                  <Supertip>
+                    <Title resid="PolishTitle"/>
+                    <Description resid="PolishDescription"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image resid="PolishIcon"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>PolishTaskpane</TaskpaneId>
+                    <SourceLocation resid="PolishTaskpaneUrl"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+          <FunctionFile resid="FunctionFileUrl"/>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+
+    <Resources>
+      <bt:Images>
+        <bt:Image id="SettingsIcon" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/assets/settings-32.png"/>
+        <bt:Image id="TranslateIcon" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/assets/translate-32.png"/>
+        <bt:Image id="SummaryIcon" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/assets/summary-32.png"/>
+        <bt:Image id="ReplyIcon" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/assets/reply-32.png"/>
+        <bt:Image id="PolishIcon" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/assets/polish-32.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="FunctionFileUrl" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/function-file.html"/>
+        <bt:Url id="SettingsTaskpaneUrl" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/index.html"/>
+        <bt:Url id="SummaryTaskpaneUrl" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/index.html"/>
+        <bt:Url id="ReplyTaskpaneUrl" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/index.html"/>
+        <bt:Url id="PolishTaskpaneUrl" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/index.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="GroupLabel" DefaultValue="AI Assistant"/>
+        <bt:String id="SettingsLabel" DefaultValue="Settings"/>
+        <bt:String id="TranslateLabel" DefaultValue="Translate"/>
+        <bt:String id="SummaryLabel" DefaultValue="Summary"/>
+        <bt:String id="ReplyLabel" DefaultValue="Reply"/>
+        <bt:String id="PolishLabel" DefaultValue="Polish"/>
+        <bt:String id="SettingsTitle" DefaultValue="Configure AI Service"/>
+        <bt:String id="TranslateTitle" DefaultValue="Translate Email"/>
+        <bt:String id="SummaryTitle" DefaultValue="Summarize Email"/>
+        <bt:String id="ReplyTitle" DefaultValue="Generate Reply"/>
+        <bt:String id="PolishTitle" DefaultValue="Polish Email"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="SettingsDescription" DefaultValue="Configure AI service provider, API key, and default settings"/>
+        <bt:String id="TranslateDescription" DefaultValue="Translate the current email content to target language"/>
+        <bt:String id="SummaryDescription" DefaultValue="Generate a summary of the current email"/>
+        <bt:String id="ReplyDescription" DefaultValue="Generate an AI-powered reply suggestion"/>
+        <bt:String id="PolishDescription" DefaultValue="Polish and improve the current email draft"/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>

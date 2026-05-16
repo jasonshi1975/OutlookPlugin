@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Office\Outlook\Addins\OutlookAIAssistant]
+"Description"="AI Mail Assistant"
+"FriendlyName"="AI Mail Assistant"
+"LoadBehavior"=dword:00000003
+"ManifestUrl"="http://127.0.0.1:3001/manifest.xml"

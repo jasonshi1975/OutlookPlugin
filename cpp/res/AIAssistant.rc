@@ -1,0 +1,69 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_CONNECT        REGISTRY        "Connect.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// XML
+//
+
+IDR_RIBBON_XML     XML             "Ribbon.xml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Note: Replace with actual icon files
+IDR_SETTINGS_ICON  ICON            "settings.ico"
+IDR_TRANSLATE_ICON ICON            "translate.ico"
+IDR_SUMMARY_ICON   ICON            "summary.ico"
+IDR_REPLY_ICON     ICON            "reply.ico"
+IDR_POLISH_ICON    ICON            "polish.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE       "AI Mail Assistant"
+    IDS_SETTINGS_LABEL  "Settings"
+    IDS_TRANSLATE_LABEL "Translate"
+    IDS_SUMMARY_LABEL   "Summary"
+    IDS_REPLY_LABEL     "Reply"
+    IDS_POLISH_LABEL    "Polish"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////

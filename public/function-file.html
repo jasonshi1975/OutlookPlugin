@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Function File</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+</head>
+<body>
+  <script>
+    Office.onReady(function() {
+      // Register functions for ExecuteFunction actions
+
+      function translateEmail(event) {
+        // Get email content and show inline translation overlay
+        Office.context.mailbox.item.body.getAsync(
+          Office.CoercionType.Text,
+          function(result) {
+            if (result.status === Office.AsyncResultStatus.Succeeded) {
+              // For ExecuteFunction, we can't show UI directly
+              // Instead, show a notification and tell user to use Taskpane
+              const message = {
+                type: "informationalMessage",
+                message: "Translation feature requires opening the Taskpane. Click 'Translate' again.",
+                icon: "URL",
+                persistent: false
+              };
+              Office.context.mailbox.item.notificationMessages.replaceAsync("translate-msg", message);
+            }
+            event.completed();
+          }
+        );
+      }
+
+      // Register the function
+      Office.actions.associate("translateEmail", translateEmail);
+    });
+  </script>
+</body>
+</html>
