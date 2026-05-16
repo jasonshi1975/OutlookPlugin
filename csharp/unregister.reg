@@ -1,9 +1,0 @@
-Windows Registry Editor Version 5.00
-
-[-HKEY_CURRENT_USER\Software\Classes\CLSID\{a1b2c3d4-e5f6-7890-abcd-ef1234567890}]
-
-[-HKEY_CURRENT_USER\Software\Classes\AIAssistant]
-
-[-HKEY_CURRENT_USER\Software\Microsoft\Office\Outlook\Addins\AIAssistant]
-
-[-HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Addins\AIAssistant]
