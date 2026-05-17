@@ -10,16 +10,16 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="AI Mail Assistant"/>
   <Description DefaultValue="AI-powered email translation, summary, reply, and polish"/>
-  <SupportUrl DefaultValue="https://github.com/yourname/outlook-ai-assistant"/>
+  <SupportUrl DefaultValue="https://github.com/yourname/OutlookPlugin"/>
 
   <!-- Icons -->
-  <IconUrl DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/assets/icon-64.png"/>
+  <IconUrl DefaultValue="https://jasonshi1975.github.io/OutlookPlugin/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://jasonshi1975.github.io/OutlookPlugin/assets/icon-64.png"/>
 
   <!-- App Domains -->
   <AppDomains>
-    <AppDomain>http://localhost:3001</AppDomain>
-    <AppDomain>http://127.0.0.1:3001</AppDomain>
+    <AppDomain>https://jasonshi1975.github.io</AppDomain>
+    <AppDomain>https://jasonshi1975.github.io/OutlookPlugin</AppDomain>
   </AppDomains>
 
   <!-- Hosts - Required at base level -->
@@ -36,7 +36,7 @@
 
   <!-- Default Settings -->
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/index.html"/>
+    <SourceLocation DefaultValue="https://jasonshi1975.github.io/OutlookPlugin/index.html"/>
   </DefaultSettings>
 
   <Permissions>ReadWriteMailbox</Permissions>
@@ -129,18 +129,18 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="SettingsIcon" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/assets/settings-32.png"/>
-        <bt:Image id="TranslateIcon" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/assets/translate-32.png"/>
-        <bt:Image id="SummaryIcon" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/assets/summary-32.png"/>
-        <bt:Image id="ReplyIcon" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/assets/reply-32.png"/>
-        <bt:Image id="PolishIcon" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/assets/polish-32.png"/>
+        <bt:Image id="SettingsIcon" DefaultValue="https://jasonshi1975.github.io/OutlookPlugin/assets/settings-32.png"/>
+        <bt:Image id="TranslateIcon" DefaultValue="https://jasonshi1975.github.io/OutlookPlugin/assets/translate-32.png"/>
+        <bt:Image id="SummaryIcon" DefaultValue="https://jasonshi1975.github.io/OutlookPlugin/assets/summary-32.png"/>
+        <bt:Image id="ReplyIcon" DefaultValue="https://jasonshi1975.github.io/OutlookPlugin/assets/reply-32.png"/>
+        <bt:Image id="PolishIcon" DefaultValue="https://jasonshi1975.github.io/OutlookPlugin/assets/polish-32.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="FunctionFileUrl" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/function-file.html"/>
-        <bt:Url id="SettingsTaskpaneUrl" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/index.html"/>
-        <bt:Url id="SummaryTaskpaneUrl" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/index.html"/>
-        <bt:Url id="ReplyTaskpaneUrl" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/index.html"/>
-        <bt:Url id="PolishTaskpaneUrl" DefaultValue="https://jasonshi1975.github.io/outlook-ai-assistant/index.html"/>
+        <bt:Url id="FunctionFileUrl" DefaultValue="https://jasonshi1975.github.io/OutlookPlugin/function-file.html"/>
+        <bt:Url id="SettingsTaskpaneUrl" DefaultValue="https://jasonshi1975.github.io/OutlookPlugin/index.html"/>
+        <bt:Url id="SummaryTaskpaneUrl" DefaultValue="https://jasonshi1975.github.io/OutlookPlugin/index.html"/>
+        <bt:Url id="ReplyTaskpaneUrl" DefaultValue="https://jasonshi1975.github.io/OutlookPlugin/index.html"/>
+        <bt:Url id="PolishTaskpaneUrl" DefaultValue="https://jasonshi1975.github.io/OutlookPlugin/index.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="AI Assistant"/>
